@@ -1,0 +1,12 @@
+{
+  "name": "RubenGV/refactor",
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
+  },
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Test\\": "test"
+    }
+  }
+}
