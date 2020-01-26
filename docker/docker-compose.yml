@@ -12,6 +12,7 @@ services:
       - db
     env_file:
       - ./env/common.env
+      - ./env/web.env
   db:
     build: ./dockerfiles/db
     env_file:
