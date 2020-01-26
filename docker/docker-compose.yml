@@ -1,8 +1,20 @@
 version: '3.4'
 services:
   web:
-    build: .
+    build: ./dockerfiles/web
     ports:
       - "80:80"
     volumes:
       - ./..:/var/www/html
+    links:
+      - db:db
+    depends_on:
+      - db
+    env_file:
+      - ./env/common.env
+  db:
+    build: ./dockerfiles/db
+    env_file:
+      - ./env/common.env
+    ports:
+      - "3306:3306"
